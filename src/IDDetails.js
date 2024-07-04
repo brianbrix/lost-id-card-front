@@ -68,17 +68,31 @@ const IDDetails=({documentType,setDocumentType,documentNumber,setDocumentNumber,
 
             </Form.Group>
             <Form.Group className="mb-3">
-                <Form.Label>Location of Document Issue</Form.Label>
-                <Form.Control
+                <Row>
+                    <Col sm={3}>
+
+                    <Form.Label>Location of Document Issue</Form.Label>
+                    </Col>
+                    <Col sm={9}>
+
+                    <Form.Control
                     type="text"
                     value={locationOfIssue}
                     onChange={(e) => setLocationOfIssue(e.target.value)}
                     required
                 />
+                    </Col>
+                </Row>
             </Form.Group>
             <Form.Group className="mb-3">
-                <Form.Label>Upload Document Front Image</Form.Label>
-                <Form.Control
+                <Row>
+                    <Col sm={3}>
+
+                    <Form.Label>Upload Document Front Image</Form.Label>
+                    </Col>
+                    <Col sm={9}>
+
+                    <Form.Control
                     type="file"
                     onChange={(e) => handleFileChange(e, setIdFrontFile, setIdFrontPreview)}
                     required
@@ -94,10 +108,18 @@ const IDDetails=({documentType,setDocumentType,documentNumber,setDocumentNumber,
                         </Button>
                     </div>
                 )}
+                    </Col>
+                </Row>
             </Form.Group>
             <Form.Group className="mb-3">
-                <Form.Label>Upload Document Back Image</Form.Label>
-                <Form.Control
+                <Row>
+                    <Col sm={3}>
+
+                    <Form.Label>Upload Document Back Image</Form.Label>
+                    </Col>
+                    <Col sm={9}>
+
+                    <Form.Control
                     type="file"
                     onChange={(e) => handleFileChange(e, setIdBackFile, setIdBackPreview)}
                 />
@@ -112,15 +134,22 @@ const IDDetails=({documentType,setDocumentType,documentNumber,setDocumentNumber,
                         </Button>
                     </div>
                 )}
+                    </Col>
+                </Row>
             </Form.Group>
-            <div className="d-flex justify-content-between">
-                <Button variant="secondary" disabled>
-                    Back
-                </Button>
-                <Button variant="primary" onClick={nextStep}>
-                    Next
-                </Button>
-            </div>
+            <Row>
+
+                <div className="d-flex justify-content-between">
+                    <Col sm={3}>
+                    </Col>
+                    <Button variant="secondary" disabled>
+                        Back
+                    </Button>
+                    <Button variant="primary" onClick={nextStep}>
+                        Next
+                    </Button>
+                </div>
+            </Row>
         </div>
     );
 };
